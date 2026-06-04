@@ -1,0 +1,12 @@
+.env
+.env.*
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+outputs/
+generated_images/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.log
