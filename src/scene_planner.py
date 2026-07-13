@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 0.4 seconds
-Output:
 """Deterministic semantic-scene and panel planning helpers."""
 
 from __future__ import annotations
