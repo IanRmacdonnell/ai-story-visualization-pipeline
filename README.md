@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 0.3 seconds
-Output:
 # From Text to Visuals: AI Pipeline for Immersive Storytelling
 
 **Research and prototype pipeline for turning literary text into visual scene prompts using NLP, genre classification, prompt engineering, and image generation.**
