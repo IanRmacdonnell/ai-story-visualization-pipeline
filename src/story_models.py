@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 0.4 seconds
-Output:
 """Provider-neutral domain models for story-to-visual production.
 
 These models deliberately contain no image or language model integration. They
