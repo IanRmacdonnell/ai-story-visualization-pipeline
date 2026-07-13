@@ -110,6 +110,10 @@ python -m unittest discover -s tests -v
 
 The product and startup plan is in [`docs/startup/`](docs/startup/README.md).
 
+The completed public-domain Day-24 benchmark, including its eight-panel visual
+storyboard, canonical Story Bible, continuity report, approvals, and decision
+review, is in [`benchmarks/man_of_the_crowd/`](benchmarks/man_of_the_crowd/README.md).
+
 ## Research Summary
 
 The original research paper explored a pipeline with:
@@ -143,4 +147,3 @@ Product version:
 - Generated visuals can drift across pages when character and setting details are not carried forward.
 - The dataset is small and focused on one author, so model results should be interpreted as a prototype.
 - Future work could add a web interface, stronger evaluation metrics, richer prompt memory, and modern multimodal models.
-

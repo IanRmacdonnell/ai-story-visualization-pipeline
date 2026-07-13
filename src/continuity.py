@@ -69,9 +69,12 @@ def check_continuity(project: StoryBible) -> List[ContinuityFinding]:
             if asset_id not in asset_ids:
                 add("blocking", "asset_reference", f"Unknown asset: {asset_id}", panel.panel_id)
 
+    all_panel_orders = sorted(panel.order for panel in project.panels)
+    if all_panel_orders != list(range(1, len(project.panels) + 1)):
+        add("blocking", "panel_order", "Chapter panel order must be contiguous and start at 1", project.project_id)
     for scene_id, orders in panel_orders.items():
-        if sorted(orders) != list(range(1, len(orders) + 1)):
-            add("blocking", "panel_order", "Panel order must be contiguous and start at 1", scene_id)
+        if orders != sorted(orders) or len(orders) != len(set(orders)):
+            add("blocking", "scene_panel_order", "Panels within a scene must be strictly increasing", scene_id)
 
     for status_error in project.validate_statuses():
         add("blocking", "status", status_error, project.project_id)
@@ -88,4 +91,3 @@ def check_continuity(project: StoryBible) -> List[ContinuityFinding]:
                     panel.panel_id,
                 )
     return findings
-

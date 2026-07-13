@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import sys
 import tempfile
 import unittest
@@ -11,10 +12,14 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from continuity import check_continuity
-from production_exporter import write_export_bundle
+from production_exporter import build_export_manifest, write_export_bundle
 from scene_planner import plan_panels, segment_semantic_scenes
 from story_models import Character, StoryBible
 from story_production_cli import build_project
+
+BENCHMARK_DIR = ROOT / "benchmarks" / "man_of_the_crowd"
+sys.path.insert(0, str(BENCHMARK_DIR))
+from build_benchmark import build_story_bible
 
 
 SAMPLE = (
@@ -63,7 +68,26 @@ class StoryPlatformTests(unittest.TestCase):
         self.assertEqual(data["project"]["title"], "Test Story")
         self.assertEqual(len(data["project_sha256"]), 64)
 
+    def test_day24_benchmark_is_canonical_and_continuity_clean(self) -> None:
+        project = build_story_bible()
+        findings = check_continuity(project)
+        self.assertEqual(len(project.scenes), 3)
+        self.assertEqual(len(project.panels), 8)
+        self.assertEqual([panel.order for panel in project.panels], list(range(1, 9)))
+        self.assertFalse([finding for finding in findings if finding.severity == "blocking"])
+        self.assertTrue(all(panel.source.validate(project.source_text) == [] for panel in project.panels))
+
+    def test_day24_storyboard_provenance_approvals_and_reproducibility(self) -> None:
+        storyboard = BENCHMARK_DIR / "man-of-the-crowd-storyboard.png"
+        project = build_story_bible(storyboard)
+        findings = check_continuity(project)
+        self.assertEqual(len(project.assets), 1)
+        self.assertEqual(len(project.approvals), 3)
+        self.assertTrue(all(panel.status == "approved" for panel in project.panels))
+        self.assertEqual(project.assets[0].status, "approved")
+        self.assertEqual(project.assets[0].file_hash, hashlib.sha256(storyboard.read_bytes()).hexdigest())
+        self.assertEqual(build_export_manifest(project, findings), build_export_manifest(project, findings))
+
 
 if __name__ == "__main__":
     unittest.main()
-

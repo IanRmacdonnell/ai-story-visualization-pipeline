@@ -1,0 +1,10 @@
+{
+  "project_id": "story_the_man_of_the_crowd_day24",
+  "scenes": 3,
+  "panels": 8,
+  "assets": 1,
+  "approvals": 3,
+  "findings": 0,
+  "blocking_findings": 0,
+  "output": "benchmarks/man_of_the_crowd/day24-production-bundle.json"
+}
