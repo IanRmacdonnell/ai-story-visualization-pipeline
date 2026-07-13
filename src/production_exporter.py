@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 0.4 seconds
-Output:
 """Reproducible export utilities for story-production projects."""
 
 from __future__ import annotations
