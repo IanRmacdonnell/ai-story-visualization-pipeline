@@ -87,6 +87,33 @@ Use a different dataset file:
 python src/story_visual_pipeline.py --data preprocessed_data.csv --story "A DESCENT INTO THE MAELSTROM"
 ```
 
+## Build a Story Production Benchmark
+
+The provider-neutral production foundation can turn any UTF-8 TXT or Markdown
+file into a versioned Story Bible export with semantic scenes, panel plans, and
+deterministic continuity findings. It does not require an API key:
+
+```bash
+python src/story_production_cli.py path/to/story.txt \
+  --title "Story Title" \
+  --author "Author Name" \
+  --rights-status public_domain \
+  --panels 8 \
+  --output output/story-production.json
+```
+
+Run the standard-library test suite:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+The product and startup plan is in [`docs/startup/`](docs/startup/README.md).
+
+The completed public-domain Day-24 benchmark, including its eight-panel visual
+storyboard, canonical Story Bible, continuity report, approvals, and decision
+review, is in [`benchmarks/man_of_the_crowd/`](benchmarks/man_of_the_crowd/README.md).
+
 ## Research Summary
 
 The original research paper explored a pipeline with:
