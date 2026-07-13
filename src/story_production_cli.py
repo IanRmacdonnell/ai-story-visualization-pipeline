@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 0.4 seconds
-Output:
 """Create a free, deterministic StoryBible benchmark from a text file."""
 
 from __future__ import annotations
