@@ -1,3 +1,6 @@
+Exit code: 0
+Wall time: 0.3 seconds
+Output:
 # From Text to Visuals: AI Pipeline for Immersive Storytelling
 
 **Research and prototype pipeline for turning literary text into visual scene prompts using NLP, genre classification, prompt engineering, and image generation.**
@@ -87,6 +90,29 @@ Use a different dataset file:
 python src/story_visual_pipeline.py --data preprocessed_data.csv --story "A DESCENT INTO THE MAELSTROM"
 ```
 
+## Build a Story Production Benchmark
+
+The provider-neutral production foundation can turn any UTF-8 TXT or Markdown
+file into a versioned Story Bible export with semantic scenes, panel plans, and
+deterministic continuity findings. It does not require an API key:
+
+```bash
+python src/story_production_cli.py path/to/story.txt \
+  --title "Story Title" \
+  --author "Author Name" \
+  --rights-status public_domain \
+  --panels 8 \
+  --output output/story-production.json
+```
+
+Run the standard-library test suite:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+The product and startup plan is in [`docs/startup/`](docs/startup/README.md).
+
 ## Research Summary
 
 The original research paper explored a pipeline with:
@@ -120,3 +146,4 @@ Product version:
 - Generated visuals can drift across pages when character and setting details are not carried forward.
 - The dataset is small and focused on one author, so model results should be interpreted as a prototype.
 - Future work could add a web interface, stronger evaluation metrics, richer prompt memory, and modern multimodal models.
+
