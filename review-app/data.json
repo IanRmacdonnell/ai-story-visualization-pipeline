@@ -1,0 +1,293 @@
+{
+  "schemaVersion": "1.0",
+  "project": {
+    "id": "story_the_man_of_the_crowd_day24",
+    "title": "The Man of the Crowd \u2014 Coffeehouse Encounter",
+    "author": "Edgar Allan Poe"
+  },
+  "evaluation": {
+    "project_id": "story_the_man_of_the_crowd_day24",
+    "scenes": 3,
+    "panels": 8,
+    "blocking_findings": 0,
+    "warning_findings": 0,
+    "source_validity_rate": 1.0,
+    "source_coverage_rate": 0.9126,
+    "entity_context_rate": 1.0,
+    "approval_rate": 0.0,
+    "quality_score": 85.0
+  },
+  "panels": [
+    {
+      "panelId": "panel_001",
+      "sceneId": "scene_001",
+      "order": 1,
+      "storyPurpose": "Establish the gaslit London crowd and the narrator framed behind glass.",
+      "sourceExcerpt": "As the night deepened, so deepened to me the interest of the scene; for not only did the general character of the crowd materially alter (its gentler features retiring in the gradual withdrawal of the more orderly portion of the people, and its harsher ones coming out into bolder relief, as the late hour brought forth every species of infamy from its den,) but the rays of the gas-lamps, feeble at first in their struggle with the dying day, had now at length gained ascendancy, and threw over every thing a fitful and garish lustre. All was dark yet splendid\u2014as that ebony to which has been likened the style of Tertullian.",
+      "sourceOffsets": [
+        0,
+        626
+      ],
+      "characterIds": [
+        "char_narrator"
+      ],
+      "locationId": "loc_coffeehouse_window",
+      "propIds": [
+        "prop_newspaper",
+        "prop_cigar"
+      ],
+      "shot": "establishing",
+      "cameraAngle": "high_angle",
+      "continuityConstraints": [
+        "1840 London only",
+        "Narrator and old man must remain visually distinct",
+        "Old man's roquelaire, fine dirty linen, diamond, and dagger remain canonical"
+      ],
+      "status": "needs_review"
+    },
+    {
+      "panelId": "panel_002",
+      "sceneId": "scene_001",
+      "order": 2,
+      "storyPurpose": "Move from the anonymous crowd toward individual faces under flickering gaslight.",
+      "sourceExcerpt": "The wild effects of the light enchained me to an examination of individual faces; and although the rapidity with which the world of light flitted before the window, prevented me from casting more than a glance upon each visage, still it seemed that, in my then peculiar mental state, I could frequently read, even in that brief interval of a glance, the history of long years.",
+      "sourceOffsets": [
+        627,
+        1003
+      ],
+      "characterIds": [
+        "char_narrator"
+      ],
+      "locationId": "loc_coffeehouse_window",
+      "propIds": [],
+      "shot": "wide",
+      "cameraAngle": "eye_level",
+      "continuityConstraints": [
+        "1840 London only",
+        "Narrator and old man must remain visually distinct",
+        "Old man's roquelaire, fine dirty linen, diamond, and dagger remain canonical"
+      ],
+      "status": "needs_review"
+    },
+    {
+      "panelId": "panel_003",
+      "sceneId": "scene_002",
+      "order": 3,
+      "storyPurpose": "Reveal the old man's face for the first time through the moving crowd.",
+      "sourceExcerpt": "With my brow to the glass, I was thus occupied in scrutinizing the mob, when suddenly there came into view a countenance (that of a decrepid old man, some sixty-five or seventy years of age,)\u2014a countenance which at once arrested and absorbed my whole attention, on account of the absolute idiosyncrasy of its expression. Any thing even remotely resembling that expression I had never seen before.",
+      "sourceOffsets": [
+        1004,
+        1400
+      ],
+      "characterIds": [
+        "char_old_man"
+      ],
+      "locationId": "loc_london_thoroughfare",
+      "propIds": [],
+      "shot": "close_up",
+      "cameraAngle": "eye_level",
+      "continuityConstraints": [
+        "1840 London only",
+        "Narrator and old man must remain visually distinct",
+        "Old man's roquelaire, fine dirty linen, diamond, and dagger remain canonical"
+      ],
+      "status": "needs_review"
+    },
+    {
+      "panelId": "panel_004",
+      "sceneId": "scene_002",
+      "order": 4,
+      "storyPurpose": "Show contradictory emotions crossing the old man's face without resolving his identity.",
+      "sourceExcerpt": "As I endeavored, during the brief minute of my original survey, to form some analysis of the meaning conveyed, there arose confusedly and paradoxically within my mind, the ideas of vast mental power, of caution, of penuriousness, of avarice, of coolness, of malice, of blood thirstiness, of triumph, of merriment, of excessive terror, of intense\u2014of supreme despair.",
+      "sourceOffsets": [
+        1573,
+        1938
+      ],
+      "characterIds": [
+        "char_old_man"
+      ],
+      "locationId": "loc_london_thoroughfare",
+      "propIds": [],
+      "shot": "extreme_close_up",
+      "cameraAngle": "eye_level",
+      "continuityConstraints": [
+        "1840 London only",
+        "Narrator and old man must remain visually distinct",
+        "Old man's roquelaire, fine dirty linen, diamond, and dagger remain canonical"
+      ],
+      "status": "needs_review"
+    },
+    {
+      "panelId": "panel_005",
+      "sceneId": "scene_002",
+      "order": 5,
+      "storyPurpose": "Return to the narrator as fascination becomes an irresistible need to follow.",
+      "sourceExcerpt": "I felt singularly aroused, startled, fascinated. \u201cHow wild a history,\u201d I said to myself, \u201cis written within that bosom!\u201d Then came a craving desire to keep the man in view\u2014to know more of him.",
+      "sourceOffsets": [
+        1939,
+        2131
+      ],
+      "characterIds": [
+        "char_narrator"
+      ],
+      "locationId": "loc_coffeehouse_window",
+      "propIds": [
+        "prop_newspaper"
+      ],
+      "shot": "close_up",
+      "cameraAngle": "eye_level",
+      "continuityConstraints": [
+        "1840 London only",
+        "Narrator and old man must remain visually distinct",
+        "Old man's roquelaire, fine dirty linen, diamond, and dagger remain canonical"
+      ],
+      "status": "needs_review"
+    },
+    {
+      "panelId": "panel_006",
+      "sceneId": "scene_003",
+      "order": 6,
+      "storyPurpose": "The narrator throws on his coat, takes hat and cane, and enters the crowd.",
+      "sourceExcerpt": "Hurriedly putting on an overcoat, and seizing my hat and cane, I made my way into the street, and pushed through the crowd in the direction which I had seen him take; for he had already disappeared. With some little difficulty I at length came within sight of him,",
+      "sourceOffsets": [
+        2132,
+        2396
+      ],
+      "characterIds": [
+        "char_narrator",
+        "char_old_man"
+      ],
+      "locationId": "loc_london_thoroughfare",
+      "propIds": [
+        "prop_hat",
+        "prop_cane"
+      ],
+      "shot": "dynamic_wide",
+      "cameraAngle": "low_angle",
+      "continuityConstraints": [
+        "1840 London only",
+        "Narrator and old man must remain visually distinct",
+        "Old man's roquelaire, fine dirty linen, diamond, and dagger remain canonical"
+      ],
+      "status": "needs_review"
+    },
+    {
+      "panelId": "panel_007",
+      "sceneId": "scene_003",
+      "order": 7,
+      "storyPurpose": "Follow behind the old man and contrast ragged outer clothes with fine linen in gaslight.",
+      "sourceExcerpt": "I had now a good opportunity of examining his person. He was short in stature, very thin, and apparently very feeble. His clothes, generally, were filthy and ragged; but as he came, now and then, within the strong glare of a lamp, I perceived that his linen, although dirty, was of beautiful texture;",
+      "sourceOffsets": [
+        2487,
+        2787
+      ],
+      "characterIds": [
+        "char_narrator",
+        "char_old_man"
+      ],
+      "locationId": "loc_london_thoroughfare",
+      "propIds": [],
+      "shot": "medium",
+      "cameraAngle": "over_shoulder",
+      "continuityConstraints": [
+        "1840 London only",
+        "Narrator and old man must remain visually distinct",
+        "Old man's roquelaire, fine dirty linen, diamond, and dagger remain canonical"
+      ],
+      "status": "needs_review"
+    },
+    {
+      "panelId": "panel_008",
+      "sceneId": "scene_003",
+      "order": 8,
+      "storyPurpose": "End on the fleeting diamond and dagger beneath the torn roquelaire as the pursuit continues.",
+      "sourceExcerpt": "and my vision deceived me, or, through a rent in a closely-buttoned and evidently second-handed roquelaire which enveloped him, I caught a glimpse both of a diamond and of a dagger. These observations heightened my curiosity, and I resolved to follow the stranger whithersoever he should go.",
+      "sourceOffsets": [
+        2788,
+        3079
+      ],
+      "characterIds": [
+        "char_old_man"
+      ],
+      "locationId": "loc_london_thoroughfare",
+      "propIds": [
+        "prop_diamond",
+        "prop_dagger"
+      ],
+      "shot": "detail",
+      "cameraAngle": "low_angle",
+      "continuityConstraints": [
+        "1840 London only",
+        "Narrator and old man must remain visually distinct",
+        "Old man's roquelaire, fine dirty linen, diamond, and dagger remain canonical"
+      ],
+      "status": "needs_review"
+    }
+  ],
+  "reviewQueue": [
+    {
+      "task_id": "review_panel_panel_001",
+      "priority": "medium",
+      "object_type": "panel",
+      "object_id": "panel_001",
+      "reason": "Panel status is needs_review",
+      "required_action": "Review source evidence, visual direction, and continuity constraints"
+    },
+    {
+      "task_id": "review_panel_panel_002",
+      "priority": "medium",
+      "object_type": "panel",
+      "object_id": "panel_002",
+      "reason": "Panel status is needs_review",
+      "required_action": "Review source evidence, visual direction, and continuity constraints"
+    },
+    {
+      "task_id": "review_panel_panel_003",
+      "priority": "medium",
+      "object_type": "panel",
+      "object_id": "panel_003",
+      "reason": "Panel status is needs_review",
+      "required_action": "Review source evidence, visual direction, and continuity constraints"
+    },
+    {
+      "task_id": "review_panel_panel_004",
+      "priority": "medium",
+      "object_type": "panel",
+      "object_id": "panel_004",
+      "reason": "Panel status is needs_review",
+      "required_action": "Review source evidence, visual direction, and continuity constraints"
+    },
+    {
+      "task_id": "review_panel_panel_005",
+      "priority": "medium",
+      "object_type": "panel",
+      "object_id": "panel_005",
+      "reason": "Panel status is needs_review",
+      "required_action": "Review source evidence, visual direction, and continuity constraints"
+    },
+    {
+      "task_id": "review_panel_panel_006",
+      "priority": "medium",
+      "object_type": "panel",
+      "object_id": "panel_006",
+      "reason": "Panel status is needs_review",
+      "required_action": "Review source evidence, visual direction, and continuity constraints"
+    },
+    {
+      "task_id": "review_panel_panel_007",
+      "priority": "medium",
+      "object_type": "panel",
+      "object_id": "panel_007",
+      "reason": "Panel status is needs_review",
+      "required_action": "Review source evidence, visual direction, and continuity constraints"
+    },
+    {
+      "task_id": "review_panel_panel_008",
+      "priority": "medium",
+      "object_type": "panel",
+      "object_id": "panel_008",
+      "reason": "Panel status is needs_review",
+      "required_action": "Review source evidence, visual direction, and continuity constraints"
+    }
+  ]
+}
