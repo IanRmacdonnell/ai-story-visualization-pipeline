@@ -136,6 +136,8 @@ python -m http.server 8000 -d review-app
 
 Open `http://127.0.0.1:8000`. Reviewers can inspect exact source passages and production constraints, approve/reject/request changes, persist decisions locally, and export a structured review JSON file.
 
+The same prototype is deployed at [Story Review Studio](https://ianrmacdonnell.github.io/ai-story-visualization-pipeline/review/).
+
 ## Research Summary
 
 The original research paper explored a pipeline with:
