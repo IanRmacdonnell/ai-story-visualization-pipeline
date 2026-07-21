@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — Evaluation and review foundation
+
+- Added deterministic StoryBible quality scoring.
+- Added source coverage, entity context, approval, and continuity metrics.
+- Added prioritized human-review task generation.
+- Added a runnable canonical benchmark report and three tests.
+
 ## 1.0.0 — Portfolio release
 
 - Added seven automated tests for source provenance, export reproducibility, and continuity rules.

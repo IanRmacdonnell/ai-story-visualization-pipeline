@@ -16,6 +16,8 @@ from production_exporter import build_export_manifest, write_export_bundle
 from scene_planner import plan_panels, segment_semantic_scenes
 from story_models import Character, StoryBible
 from story_production_cli import build_project
+from review_queue import build_review_queue
+from story_evaluation import evaluate_story_bible, merged_span_length
 
 BENCHMARK_DIR = ROOT / "benchmarks" / "man_of_the_crowd"
 sys.path.insert(0, str(BENCHMARK_DIR))
@@ -87,6 +89,25 @@ class StoryPlatformTests(unittest.TestCase):
         self.assertEqual(project.assets[0].status, "approved")
         self.assertEqual(project.assets[0].file_hash, hashlib.sha256(storyboard.read_bytes()).hexdigest())
         self.assertEqual(build_export_manifest(project, findings), build_export_manifest(project, findings))
+
+    def test_story_evaluation_measures_provenance_context_and_continuity(self) -> None:
+        project = build_story_bible()
+        report = evaluate_story_bible(project)
+        self.assertEqual(report["blocking_findings"], 0)
+        self.assertEqual(report["source_validity_rate"], 1.0)
+        self.assertEqual(report["entity_context_rate"], 1.0)
+        self.assertGreater(report["source_coverage_rate"], 0.25)
+        self.assertGreaterEqual(report["quality_score"], 80)
+
+    def test_review_queue_surfaces_unapproved_panels(self) -> None:
+        project = build_project("Test Story", "Tester", SAMPLE, "internal_test", panels=2)
+        queue = build_review_queue(project, check_continuity(project))
+        panel_tasks = [task for task in queue if task.object_type == "panel"]
+        self.assertTrue(panel_tasks)
+        self.assertTrue(any("status" in task.reason.lower() for task in panel_tasks))
+
+    def test_coverage_merges_overlapping_source_spans(self) -> None:
+        self.assertEqual(merged_span_length([(0, 10), (5, 15), (20, 25)]), 20)
 
 
 if __name__ == "__main__":
