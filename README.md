@@ -117,6 +117,16 @@ The completed public-domain Day-24 benchmark, including its eight-panel visual
 storyboard, canonical Story Bible, continuity report, approvals, and decision
 review, is in [`benchmarks/man_of_the_crowd/`](benchmarks/man_of_the_crowd/README.md).
 
+## Evaluation and Human Review
+
+Run the canonical benchmark evaluation and generate its review queue:
+
+```bash
+python evaluate_story_benchmark.py
+```
+
+The report measures source-offset validity, source coverage, entity context, approvals, and blocking continuity findings. It converts unresolved findings, unapproved panels, and missing continuity constraints into prioritized review tasks. This provides a deterministic boundary for a future visual review interface without coupling the story model to an image provider.
+
 ## Research Summary
 
 The original research paper explored a pipeline with:
