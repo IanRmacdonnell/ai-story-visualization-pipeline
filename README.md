@@ -1,5 +1,8 @@
 # From Text to Visuals: AI Pipeline for Immersive Storytelling
 
+[![CI](https://github.com/IanRmacdonnell/ai-story-visualization-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/IanRmacdonnell/ai-story-visualization-pipeline/actions/workflows/ci.yml)
+[![Case study](https://img.shields.io/badge/live-case_study-8f3e31)](https://ianrmacdonnell.github.io/ai-story-visualization-pipeline/)
+
 **Research and prototype pipeline for turning literary text into visual scene prompts using NLP, genre classification, prompt engineering, and image generation.**
 
 This project grew out of a 31-page research paper exploring how AI could make classic literature more immersive and accessible. Using Edgar Allan Poe's short stories as a test case, the project experiments with a workflow that analyzes narrative text, identifies genre and tone, and produces visual descriptions that can guide image generation.
