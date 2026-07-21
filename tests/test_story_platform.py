@@ -18,6 +18,7 @@ from story_models import Character, StoryBible
 from story_production_cli import build_project
 from review_queue import build_review_queue
 from story_evaluation import evaluate_story_bible, merged_span_length
+from build_review_app_data import build_review_payload
 
 BENCHMARK_DIR = ROOT / "benchmarks" / "man_of_the_crowd"
 sys.path.insert(0, str(BENCHMARK_DIR))
@@ -108,6 +109,13 @@ class StoryPlatformTests(unittest.TestCase):
 
     def test_coverage_merges_overlapping_source_spans(self) -> None:
         self.assertEqual(merged_span_length([(0, 10), (5, 15), (20, 25)]), 20)
+
+    def test_review_app_payload_preserves_panel_source_and_queue(self) -> None:
+        payload = build_review_payload()
+        self.assertEqual(payload["schemaVersion"], "1.0")
+        self.assertEqual(len(payload["panels"]), 8)
+        self.assertEqual(len(payload["reviewQueue"]), 8)
+        self.assertTrue(all(panel["sourceExcerpt"] for panel in payload["panels"]))
 
 
 if __name__ == "__main__":

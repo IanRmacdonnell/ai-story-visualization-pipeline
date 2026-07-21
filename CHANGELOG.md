@@ -6,6 +6,9 @@
 - Added source coverage, entity context, approval, and continuity metrics.
 - Added prioritized human-review task generation.
 - Added a runnable canonical benchmark report and three tests.
+- Added a responsive local panel-review application.
+- Added exact source evidence, production constraints, persisted decisions, and review export.
+- Added a generated review-app data contract and expanded the suite to 11 tests.
 
 ## 1.0.0 — Portfolio release
 

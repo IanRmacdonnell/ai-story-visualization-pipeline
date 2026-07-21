@@ -127,6 +127,15 @@ python evaluate_story_benchmark.py
 
 The report measures source-offset validity, source coverage, entity context, approvals, and blocking continuity findings. It converts unresolved findings, unapproved panels, and missing continuity constraints into prioritized review tasks. This provides a deterministic boundary for a future visual review interface without coupling the story model to an image provider.
 
+Build and run the local human-review application:
+
+```bash
+python build_review_app_data.py
+python -m http.server 8000 -d review-app
+```
+
+Open `http://127.0.0.1:8000`. Reviewers can inspect exact source passages and production constraints, approve/reject/request changes, persist decisions locally, and export a structured review JSON file.
+
 ## Research Summary
 
 The original research paper explored a pipeline with:

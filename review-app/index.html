@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Human review workspace for source-linked StoryBible panels." />
+    <title>Story Review Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="eyebrow">HUMAN-IN-THE-LOOP PROTOTYPE</p>
+        <h1>Story Review Studio</h1>
+        <p id="project-label">Loading canonical benchmark…</p>
+      </div>
+      <div class="header-actions">
+        <button id="reset" class="secondary">Reset decisions</button>
+        <button id="export" class="primary">Export review</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="metrics" class="metrics" aria-label="Quality metrics"></section>
+      <section class="workspace">
+        <aside>
+          <div class="aside-heading">
+            <div><p class="eyebrow">REVIEW QUEUE</p><h2>Panels</h2></div>
+            <span id="progress">0 / 0</span>
+          </div>
+          <nav id="panel-list" aria-label="Panels awaiting review"></nav>
+        </aside>
+        <article id="panel-detail" class="panel-detail" aria-live="polite"></article>
+      </section>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

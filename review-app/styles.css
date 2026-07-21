@@ -1,0 +1,45 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #182033; background: #f3f5f9; --ink:#182033; --muted:#697386; --border:#dde2ea; --purple:#6558e8; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, textarea { font: inherit; }
+header { display:flex; justify-content:space-between; align-items:end; gap:24px; padding:34px clamp(20px,5vw,72px); color:white; background:#11182b; }
+h1,h2,h3,p { margin-top:0; }
+h1 { margin-bottom:8px; font-size:clamp(30px,4vw,48px); }
+header p:last-child { margin-bottom:0; color:#aeb8cc; }
+.eyebrow { margin-bottom:7px; color:#9186ff; font-size:11px; font-weight:800; letter-spacing:.14em; }
+.header-actions { display:flex; gap:10px; }
+button { border:0; border-radius:9px; padding:11px 15px; font-weight:750; cursor:pointer; }
+.primary { color:white; background:var(--purple); }
+.secondary { color:#3e485c; background:white; border:1px solid var(--border); }
+main { padding:28px clamp(20px,5vw,72px) 70px; }
+.metrics { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:20px; }
+.metric { padding:17px; border:1px solid var(--border); border-radius:12px; background:white; }
+.metric span,.metric small { display:block; color:var(--muted); font-size:11px; }
+.metric strong { display:block; margin:7px 0 3px; font-size:25px; }
+.workspace { display:grid; grid-template-columns:300px minmax(0,1fr); min-height:620px; overflow:hidden; border:1px solid var(--border); border-radius:15px; background:white; }
+aside { padding:21px; border-right:1px solid var(--border); background:#fafbfc; }
+.aside-heading { display:flex; justify-content:space-between; align-items:center; }
+.aside-heading h2 { margin-bottom:0; }
+#progress { padding:5px 8px; border-radius:999px; color:#554bbd; background:#eeecff; font-size:11px; font-weight:800; }
+#panel-list { display:grid; gap:8px; margin-top:20px; }
+.panel-link { display:grid; grid-template-columns:34px 1fr auto; align-items:center; gap:10px; width:100%; padding:11px; text-align:left; color:var(--ink); background:white; border:1px solid var(--border); }
+.panel-link.active { border-color:#8f85f4; box-shadow:0 0 0 2px #8f85f422; }
+.panel-link .number { display:grid; place-items:center; width:30px; height:30px; border-radius:8px; color:#554bbd; background:#eeecff; }
+.panel-link strong,.panel-link small { display:block; }
+.panel-link small { margin-top:3px; color:var(--muted); }
+.status-dot { width:9px; height:9px; border-radius:50%; background:#d5dae3; }
+.status-dot.approved { background:#1fa877; }.status-dot.rejected { background:#d34e4e; }.status-dot.changes { background:#e3a32f; }
+.panel-detail { padding:clamp(24px,4vw,48px); }
+.detail-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:24px; }
+.source-card,.direction-card { padding:22px; border:1px solid var(--border); border-radius:12px; background:#fbfcfe; }
+.source-card blockquote { margin:14px 0 0; color:#39445a; font:500 17px/1.75 Georgia,serif; }
+.meta-list { display:grid; gap:9px; margin:17px 0 0; }
+.meta-list div { display:flex; justify-content:space-between; gap:18px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+.meta-list span { color:var(--muted); }
+.constraints { padding-left:20px; line-height:1.6; }
+.decision-box { margin-top:24px; padding:22px; border-radius:12px; background:#f6f4ff; }
+.decision-actions { display:flex; flex-wrap:wrap; gap:9px; }
+.approve { color:white; background:#168d65; }.reject { color:white; background:#bd4040; }.changes { color:#714d04; background:#f8d98d; }
+textarea { width:100%; min-height:90px; margin-top:14px; padding:12px; border:1px solid #cfd5df; border-radius:9px; resize:vertical; }
+@media(max-width:1000px){.metrics{grid-template-columns:repeat(3,1fr)}.workspace{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--border)}#panel-list{grid-template-columns:repeat(2,1fr)}.detail-grid{grid-template-columns:1fr}}
+@media(max-width:640px){header{align-items:flex-start;flex-direction:column}.metrics{grid-template-columns:1fr 1fr}#panel-list{grid-template-columns:1fr}.header-actions{width:100%}.header-actions button{flex:1}}
