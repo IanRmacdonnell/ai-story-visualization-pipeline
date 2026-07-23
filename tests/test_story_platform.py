@@ -114,7 +114,9 @@ class StoryPlatformTests(unittest.TestCase):
         payload = build_review_payload()
         self.assertEqual(payload["schemaVersion"], "1.0")
         self.assertEqual(len(payload["panels"]), 8)
-        self.assertEqual(len(payload["reviewQueue"]), 8)
+        self.assertEqual(payload["evaluation"]["approval_rate"], 1.0)
+        self.assertEqual(payload["reviewQueue"], [])
+        self.assertTrue(all(panel["status"] == "approved" for panel in payload["panels"]))
         self.assertTrue(all(panel["sourceExcerpt"] for panel in payload["panels"]))
 
 

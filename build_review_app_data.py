@@ -9,6 +9,7 @@ from typing import Dict
 
 
 ROOT = Path(__file__).resolve().parent
+CANONICAL_STORYBOARD = ROOT / "benchmarks" / "man_of_the_crowd" / "man-of-the-crowd-storyboard.png"
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "benchmarks" / "man_of_the_crowd"))
 
@@ -19,7 +20,7 @@ from story_evaluation import evaluate_story_bible
 
 
 def build_review_payload() -> Dict[str, object]:
-    project = build_story_bible()
+    project = build_story_bible(CANONICAL_STORYBOARD)
     findings = check_continuity(project)
     queue = build_review_queue(project, findings)
     return {

@@ -8,6 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
+CANONICAL_STORYBOARD = ROOT / "benchmarks" / "man_of_the_crowd" / "man-of-the-crowd-storyboard.png"
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "benchmarks" / "man_of_the_crowd"))
 
@@ -18,7 +19,7 @@ from story_evaluation import evaluate_story_bible
 
 
 def main() -> None:
-    project = build_story_bible()
+    project = build_story_bible(CANONICAL_STORYBOARD)
     findings = check_continuity(project)
     report = evaluate_story_bible(project)
     queue = build_review_queue(project, findings)

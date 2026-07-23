@@ -127,6 +127,8 @@ python evaluate_story_benchmark.py
 
 The report measures source-offset validity, source coverage, entity context, approvals, and blocking continuity findings. It converts unresolved findings, unapproved panels, and missing continuity constraints into prioritized review tasks. This provides a deterministic boundary for a future visual review interface without coupling the story model to an image provider.
 
+The canonical public-domain benchmark has completed human review: all eight panels and the storyboard asset are approved, the approval rate is 100%, and the review queue is empty. The approval remains explicitly limited to benchmark concept art rather than publication-ready sequential art.
+
 Build and run the local human-review application:
 
 ```bash
